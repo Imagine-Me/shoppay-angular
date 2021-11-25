@@ -1,0 +1,31 @@
+@import "../../styles.scss";
+
+
+.app-bar {
+  background: transparent;
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .logo > h2 {
+    color: $primary-color !important;
+    margin-left: 5px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .mat-form-field{
+    margin-left: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+  .menu-buttons{
+    button{
+      text-transform: uppercase;
+    }
+  }
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

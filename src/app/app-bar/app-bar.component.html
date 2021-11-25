@@ -1,0 +1,33 @@
+<mat-toolbar class="app-bar">
+  <button
+    mat-icon-button
+    class="example-icon"
+    appShow="sm"
+    aria-label="Menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="logo">
+    <img src="../../assets/shop_pay.png" width="28" />
+    <h2>Shopay</h2>
+    <mat-form-field appearance="outline">
+      <mat-icon matSuffix>search</mat-icon>
+      <input matInput placeholder="Search" />
+    </mat-form-field>
+  </div>
+  <div class="menu-buttons">
+    <button mat-button aria-label="Cart button">
+      <mat-icon>add_shopping_cart</mat-icon>
+      cart
+    </button>
+    <button mat-button [matMenuTriggerFor]="menu">EN</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>EN-US</button>
+      <button mat-menu-item>ML-IN</button>
+    </mat-menu>
+    <button mat-button aria-label="Cart button">
+      <mat-icon>perm_identity</mat-icon>
+      login
+    </button>
+  </div>
+</mat-toolbar>
