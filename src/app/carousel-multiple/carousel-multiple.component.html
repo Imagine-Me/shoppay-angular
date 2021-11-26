@@ -1,0 +1,20 @@
+<div class="carousel-multiple">
+  <ul
+    #carouselRef
+    class="carousel-container"
+    [ngStyle]="{ 'transition-duration': duration + 's' }"
+  >
+    <ng-container *ngIf="slides.length > 0">
+      <li #carouselItemRef *ngFor="let slide of slides" class="carousel-item">
+        <ng-container
+          *ngTemplateOutlet="slideTemplateRef; context: { $implicit: slide }"
+        >
+        </ng-container>
+      </li>
+    </ng-container>
+  </ul>
+  <ng-container *ngIf="slides.length > 0">
+    <button (click)="onPrev()">left</button>
+    <button (click)="onNext()">right</button>
+  </ng-container>
+</div>

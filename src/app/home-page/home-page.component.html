@@ -36,3 +36,17 @@
         'height': '100%'
       }"></div>
 </ng-template> -->
+
+
+<div class="carousel-category">
+  <app-carousel-multiple
+  [slides]="categorySlides"
+  [slideTemplateRef]="slideCategory"
+  ></app-carousel-multiple>
+
+  <ng-template #slideCategory let-slide>
+    <div class="container" [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }">
+      {{ slide.title }}
+    </div>
+  </ng-template>
+</div>

@@ -10,6 +10,7 @@ import { AppBarComponent } from './app-bar/app-bar.component';
 import { ShowDirective } from './show.directive';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselMultipleComponent } from './carousel-multiple/carousel-multiple.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     AppBarComponent,
     ShowDirective,
     HomePageComponent,
-    CarouselComponent
+    CarouselComponent,
+    CarouselMultipleComponent
   ],
   imports: [
     BrowserModule,
