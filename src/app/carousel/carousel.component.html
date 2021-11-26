@@ -12,21 +12,55 @@
       </ng-container>
     </li>
   </ul>
+  <ng-container *ngIf="!isThumbnailsVisible">
+  <button
+    class="navigation back-button"
+    mat-mini-fab
+    (click)="select(activeSlides.previous)"
+    *ngIf="slides.length > 1"
+  >
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <button
+    class="navigation forward-button"
+    mat-mini-fab
+    (click)="select(activeSlides.next)"
+    *ngIf="slides.length > 1"
+  >
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+</ng-container>
 </div>
 
-
 <div class="navigations">
-    <button type="button" (click)="select(activeSlides.previous)" *ngIf="slides.length > 1 && isNavigationVisible">
-    <span>left</span> 
-</button>
-    <div>
-        <ol class="thumbnails" *ngIf="slides.length > 1 && isThumbnailsVisible">
-            <li *ngFor="let slide of slides; let i = index;" [class.is-active]="i === activeSlides.current" (click)="select(i)">
-                <ng-container *ngTemplateOutlet="thumbnailTemplateRef; context: { $implicit: slide }"></ng-container>
-            </li>
-        </ol>
-    </div>
-    <button type="button" (click)="select(activeSlides.next)" *ngIf="slides.length > 1 && isNavigationVisible">
-    <span>right</span> 
-</button>
+  <button
+    type="button"
+    (click)="select(activeSlides.previous)"
+    *ngIf="slides.length > 1 && isNavigationVisible"
+  >
+    <span>left</span>
+  </button>
+  <div>
+    <ol class="thumbnails" *ngIf="slides.length > 1 && isThumbnailsVisible">
+      <li
+        *ngFor="let slide of slides; let i = index"
+        [class.is-active]="i === activeSlides.current"
+        (click)="select(i)"
+      >
+        <ng-container
+          *ngTemplateOutlet="
+            thumbnailTemplateRef;
+            context: { $implicit: slide }
+          "
+        ></ng-container>
+      </li>
+    </ol>
+  </div>
+  <button
+    type="button"
+    (click)="select(activeSlides.next)"
+    *ngIf="slides.length > 1 && isNavigationVisible"
+  >
+    <span>right</span>
+  </button>
 </div>

@@ -1,11 +1,12 @@
-<app-carousel
-  [autoPlayDuration]="5000"
-  [isNavigationVisible]="false"
-  [isThumbnailsVisible]="true"
-  [slides]="slides"
-  [slideTemplateRef]="slide"
->
-</app-carousel>
+<div class="carousel-container">
+  <app-carousel
+    [autoPlayDuration]="5000"
+    [isNavigationVisible]="false"
+    [isThumbnailsVisible]="false"
+    [slides]="slides"
+    [slideTemplateRef]="slide"
+  >
+  </app-carousel>
 <ng-template #slide let-slide>
   <div class="main-carousel">
     <div class="text-content">
@@ -24,6 +25,7 @@
   </div>
 </ng-template>
 
+</div>
 <!-- <ng-template #thumbnail let-slide>
 		<div [ngStyle]="{
         'background-size': 'cover',

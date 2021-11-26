@@ -21,21 +21,36 @@ export enum Direction {
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
-  changeDetection:ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('slideState', [
-      state('current', style({
-        transform: 'translateX(0%)',
-        zIndex: 1,
-      })),
-      state('next', style({
-        transform: 'translateX(100%)',
-        zIndex: 1,
-      })),
+      state(
+        'current',
+        style({
+          transform: 'translateX(0%)',
+          zIndex: 1,
+        })
+      ),
+      state(
+        'next',
+        style({
+          transform: 'translateX(100%)',
+          zIndex: 1,
+        })
+      ),
+      state(
+        'previous',
+        style({
+          transform: 'translateX(-100%)',
+          zIndex: 1,
+        })
+      ),
       transition('current => previous', animate('400ms ease-out')),
       transition('next => current', animate('400ms ease-out')),
-    ])
-  ]
+      transition('previous => current', animate('400ms ease-out')),
+      transition('current => next', animate('400ms ease-out')),
+    ]),
+  ],
 })
 export class CarouselComponent implements OnInit, OnDestroy {
 
