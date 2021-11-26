@@ -3,6 +3,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    padding: 20px 0;
     .carousel-container{
         transition: ease-in-out;
         list-style: none;
@@ -12,5 +13,16 @@
         .carousel-item{
             display: inline-block;
         }
+    }
+    .navigation{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .navigation.button-back{
+        left: 15px;
+    }
+    .navigation.button-forward{
+        right: 15px;
     }
 }

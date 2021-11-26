@@ -7,24 +7,23 @@
     [slideTemplateRef]="slide"
   >
   </app-carousel>
-<ng-template #slide let-slide>
-  <div class="main-carousel">
-    <div class="text-content">
-      <div>
-        <div class="title">{{ slide.title }}</div>
-        <div class="description">{{ slide.description }}</div>
+  <ng-template #slide let-slide>
+    <div class="main-carousel">
+      <div class="text-content">
+        <div>
+          <div class="title">{{ slide.title }}</div>
+          <div class="description">{{ slide.description }}</div>
+        </div>
+      </div>
+      <div class="image-content">
+        <div
+          class="image"
+          [ngStyle]="{ 'background-image': 'url(' + slide.url + ')' }"
+        ></div>
+        <div class="overlay"></div>
       </div>
     </div>
-    <div class="image-content">
-      <div
-        class="image"
-        [ngStyle]="{ 'background-image': 'url(' + slide.url + ')' }"
-      ></div>
-      <div class="overlay"></div>
-    </div>
-  </div>
-</ng-template>
-
+  </ng-template>
 </div>
 <!-- <ng-template #thumbnail let-slide>
 		<div [ngStyle]="{
@@ -37,16 +36,18 @@
       }"></div>
 </ng-template> -->
 
-
 <div class="carousel-category">
   <app-carousel-multiple
-  [slides]="categorySlides"
-  [slideTemplateRef]="slideCategory"
+    [slides]="categorySlides"
+    [slideTemplateRef]="slideCategory"
   ></app-carousel-multiple>
 
   <ng-template #slideCategory let-slide>
-    <div class="container" [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }">
-      {{ slide.title }}
+    <div
+      class="container"
+      [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
+    >
+      <div class="title">{{ slide.title }}</div>
     </div>
   </ng-template>
 </div>

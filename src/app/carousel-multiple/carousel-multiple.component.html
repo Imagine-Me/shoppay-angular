@@ -14,7 +14,11 @@
     </ng-container>
   </ul>
   <ng-container *ngIf="slides.length > 0">
-    <button (click)="onPrev()">left</button>
-    <button (click)="onNext()">right</button>
+    <button mat-mini-fab class="navigation button-back" (click)="onPrev()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-mini-fab class="navigation button-forward" (click)="onNext()">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
   </ng-container>
 </div>
