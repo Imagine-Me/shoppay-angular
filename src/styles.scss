@@ -32,16 +32,22 @@ $theme-palette: (
   ),
 );
 
-$primary-color: map-get(
-  $map: $theme-palette,
-  $key: 600,
-);
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $shoppay-primary: mat.define-palette($theme-palette);
 $shoppay-accent: mat.define-palette(mat.$red-palette, A200, A100, A400);
+
+$primary-color: map-get(
+  $map: $theme-palette,
+  $key: 600,
+);
+
+
+$accent-color: map-get(
+  $map: $shoppay-accent,
+  $key: 500,
+);
 
 // The warn palette is optional (defaults to red).
 $shoppay-warn: mat.define-palette(mat.$red-palette);

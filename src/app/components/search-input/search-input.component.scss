@@ -1,0 +1,35 @@
+@import '../../../styles.scss';
+
+
+.search-input-container {
+  border: 1px solid rgb(224, 224, 224);
+  padding: 4px 15px;
+  border-radius: 21px;
+  width: 100%;
+  min-width: 200px;
+  position: relative;
+  .search-input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+  .icon {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    color: white;
+    background-color: $accent-color;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+  }
+}

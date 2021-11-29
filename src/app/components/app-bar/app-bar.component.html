@@ -9,13 +9,14 @@
   </button>
   <div class="logo">
     <a routerLink="/">
-    <img src="../../assets/shop_pay.png" width="30" height="30" />
+      <img src="../../assets/shop_pay.png" width="30" height="30" />
       <h2>Shopay</h2>
     </a>
-    <mat-form-field appearance="outline">
-      <mat-icon matSuffix>search</mat-icon>
-      <input matInput placeholder="Search" />
-    </mat-form-field>
+    <div class="search-input-style">
+      <app-search-input placeHolder="Search">
+        <mat-icon input-icon>search</mat-icon>
+      </app-search-input>
+    </div>
   </div>
   <div class="menu-buttons">
     <button mat-button aria-label="Cart button">
