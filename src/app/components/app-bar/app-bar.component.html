@@ -19,15 +19,15 @@
     </div>
   </div>
   <div class="menu-buttons">
-    <button mat-button aria-label="Cart button" class="remove-upto-md">
-      <mat-icon>add_shopping_cart</mat-icon>
-      cart
-    </button>
     <button mat-button [matMenuTriggerFor]="menu">EN</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>EN-US</button>
       <button mat-menu-item>ML-IN</button>
     </mat-menu>
+    <button mat-button aria-label="Cart button" class="remove-upto-md">
+      <mat-icon>add_shopping_cart</mat-icon>
+      cart
+    </button>
     <button mat-button aria-label="Cart button" class="remove-upto-md">
       <mat-icon>perm_identity</mat-icon>
       login

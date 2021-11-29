@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppBarComponent } from './components/app-bar/app-bar.component';
 import { ShowDirective } from './show.directive';
-import { HomePageComponent } from './home-page/home-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CarouselMultipleComponent } from './components/carousel-multiple/carousel-multiple.component';
 import { FooterComponent } from './components/footer/footer.component';
