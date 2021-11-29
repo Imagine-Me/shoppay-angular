@@ -1,6 +1,17 @@
 <div class="search-input-container">
-    <input type="text" [placeholder]="placeHolder" class="search-input" />
-    <button class="icon">
-        <ng-content select="[input-icon]"></ng-content>
-    </button>
+  <input
+    type="text"
+    [placeholder]="placeHolder"
+    class="search-input"
+    [formControl]="myControl"
+    [matAutocomplete]="auto"
+  />
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option.name }}
+    </mat-option>
+  </mat-autocomplete>
+  <button class="icon">
+    <ng-content select="[input-icon]"></ng-content>
+  </button>
 </div>

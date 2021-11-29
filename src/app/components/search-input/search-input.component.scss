@@ -11,12 +11,13 @@
   align-items: baseline;
   position: relative;
   .search-input {
-    width: 95%;
     border: none;
     font-size: 16px;
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     left: 15px;
+    top: 0;
+    width: calc(100% - 30px);
     background-color: transparent;
     &:focus {
       outline: none;
