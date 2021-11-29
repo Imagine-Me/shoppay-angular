@@ -14,6 +14,7 @@ import { CarouselMultipleComponent } from './components/carousel-multiple/carous
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
+import { ListPageComponent } from './pages/list-page/list-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BottomNavigationComponent } from './components/bottom-navigation/bottom
     CarouselMultipleComponent,
     FooterComponent,
     SearchInputComponent,
-    BottomNavigationComponent
+    BottomNavigationComponent,
+    ListPageComponent
   ],
   imports: [
     BrowserModule,
