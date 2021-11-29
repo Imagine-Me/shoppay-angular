@@ -11,6 +11,7 @@ import { ShowDirective } from './show.directive';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselMultipleComponent } from './carousel-multiple/carousel-multiple.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CarouselMultipleComponent } from './carousel-multiple/carousel-multiple
     ShowDirective,
     HomePageComponent,
     CarouselComponent,
-    CarouselMultipleComponent
+    CarouselMultipleComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

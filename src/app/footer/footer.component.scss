@@ -1,0 +1,13 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgba(128, 128, 128, 0.103);
+  align-items: center;
+  .right{
+      align-items: center;
+      display: flex;
+  }
+}
