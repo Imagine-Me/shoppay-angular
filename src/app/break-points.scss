@@ -1,0 +1,20 @@
+$sm: 480px;
+$md: 768px;
+$lg: 1024px;
+$xlg: 1200px;
+
+.remove-only-sm {
+  @media screen and (max-width: $sm) {
+    display: none !important;
+  }
+}
+.remove-upto-md {
+  @media screen and (max-width: $md) {
+    display: none !important;
+  }
+}
+.show-upto-md {
+  @media screen and(min-width: $md) {
+    display: none !important;
+  }
+}

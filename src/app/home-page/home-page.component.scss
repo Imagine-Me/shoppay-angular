@@ -50,7 +50,7 @@
   height: 65%;
 }
 .carousel-category{
-  padding: 0 20px;
+  padding: 0 15px;
   .container{
     width: 12rem;
     height: 14rem;
@@ -60,7 +60,7 @@
     margin-right: 15px;
     position: relative;
     transition: .5s ease-in-out;
-    box-shadow: 1px 1px 12px rgba(128, 128, 128, 0.479);
+    box-shadow: 1px 1px 5px rgba(202, 202, 202, 0.479);
     &:hover {
       cursor: pointer;
       transform: scale(1.1);

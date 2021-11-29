@@ -13,6 +13,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { CarouselMultipleComponent } from './components/carousel-multiple/carousel-multiple.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
+import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchInputComponent } from './components/search-input/search-input.com
     CarouselComponent,
     CarouselMultipleComponent,
     FooterComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    BottomNavigationComponent
   ],
   imports: [
     BrowserModule,
